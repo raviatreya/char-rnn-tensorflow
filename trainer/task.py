@@ -43,6 +43,8 @@ def main():
                         help='probability of keeping weights in the hidden layer')
     parser.add_argument('--input_keep_prob', type=float, default=1.0,
                         help='probability of keeping weights in the input layer')
+    parser.add_argument('--job-dir', type=str, default='output',
+                        help='google cloud platform ML API argument that can be ignored based on this implementation')
     parser.add_argument('--init_from', type=str, default=None,
                         help="""continue training from saved model at this path. Path must contain files saved by previous training process:
                             'config.pkl'        : configuration;
